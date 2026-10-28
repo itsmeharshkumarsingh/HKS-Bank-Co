@@ -2,13 +2,7 @@
 
 # HKS Bank & Co. | Enterprise Banking Architecture
 
-<<<<<<< HEAD
 ### Enterprise-grade **transactional banking engine**: Node.js Express API + ACID Compliance + Pessimistic Concurrency Control + Row-Level Locking
-=======
-#### 🔗 [Live Deployment Link](https://hks-bank-co.onrender.com/#https://hks-bank-co.onrender.com/#)
-
-A high-fidelity, interactive **Single Page Application (SPA)** banking portal designed to demonstrate robust backend engineering, focusing on **ACID compliance** and **pessimistic concurrency control**.
->>>>>>> 3a0d22158830a05830bf17f2bb1ff9d2b01c51d3
 
 [![Live Deployment](https://img.shields.io/badge/Live_Deployment-Render-46E3B7?style=flat&logo=render&logoColor=white)](https://hks-bank-co.onrender.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
@@ -50,7 +44,6 @@ A high-fidelity, interactive **Single Page Application (SPA)** banking portal en
 12. [Troubleshooting](#troubleshooting)
 13. [Contributing & License](#contributing--license)
 
-<<<<<<< HEAD
 ---
 
 ## The Engineering Problem & Solution
@@ -121,7 +114,7 @@ flowchart TD
           ┌──────▼──────┐    ┌─────────▼───────────┐   ┌──────▼──────┐
           │ FOR UPDATE  │    │  Account Balances   │   │  Immutable  │
           │  Row Queue  │    │ (Deduct / Credit)   │   │  Audit Log  │
-          └─────────────┘    └─────────────────────┘   └─────────────┘
+          └─────────────┘    └────────────────     │   └─────────────┘
 ```
 </details>
 
@@ -214,6 +207,12 @@ HKS-Bank-Co/
 
 ---
 
+## Demo
+
+![HKS Bank & Co. Demo](demo.gif)
+
+---
+
 ## Quick Start (Local)
 
 ### Option A: Standard Local Setup
@@ -231,8 +230,7 @@ cp .env.example .env
 # Edit .env with your DB_HOST, DB_USER, DB_PASS, and DB_NAME
 
 # 4. Initialize MySQL schema and Stored Procedures
-mysql -u root -p < database/schema.sql
-mysql -u root -p < database/procedures.sql
+mysql -u root -p < schema.sql
 
 # 5. Launch the enterprise gateway
 npm start
@@ -317,8 +315,8 @@ Create a `.env` file in the root directory before launching:
 |---|---|
 | `ER_LOCK_WAIT_TIMEOUT` during transfers | Ensure no manual MySQL client session is holding an uncommitted `FOR UPDATE` transaction |
 | `ECONNREFUSED 127.0.0.1:3306` | Verify your MySQL server is running and `.env` credentials match your local/cloud instance |
-| Stored Procedure not found (`ER_SP_DOES_NOT_EXIST`) | Re-run `mysql -u root -p < database/procedures.sql` to register the atomic transfer routines |
-| SSL/TLS handshake error on cloud MySQL | Ensure `ssl: { rejectUnauthorized: true }` is configured inside `config/db.js` for cloud clusters |
+| Stored Procedure not found (`ER_SP_DOES_NOT_EXIST`) | Re-run `mysql -u root -p < schema.sql` to register the atomic transfer routines |
+| SSL/TLS handshake error on cloud MySQL | Ensure `ssl: { rejectUnauthorized: true }` is configured inside `db.js` for cloud clusters |
 
 ---
 
@@ -326,9 +324,9 @@ Create a `.env` file in the root directory before launching:
 
 Engineered as an enterprise backend architecture showcase for SDE technical interviews. While external pull requests are restricted to preserve architectural baselines, feedback and issue reports are always welcome:
 
-1. Fork the repository
+1. Fork the project
 2. Create your feature branch (`git checkout -b feature/Optimization`)
-3. Commit your changes (`git commit -m 'Optimize SQL row-lock indexing'`)
+3. Commit your changes (`git commit -m 'Optimized SQL row-lock indexing'`)
 4. Push to the branch (`git push origin feature/Optimization`)
 5. Open a Pull Request
 
@@ -339,10 +337,3 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 ### If you find this transactional banking architecture useful, give the repository a star.
 
 </div>
-=======
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/Optimization`)
-3.  Commit your Changes (`git commit -m 'Optimized SQL JOIN logic'`)
-4.  Push to the Branch (`git push origin feature/Optimization`)
-5.  Open a Pull Request
->>>>>>> 3a0d22158830a05830bf17f2bb1ff9d2b01c51d3
