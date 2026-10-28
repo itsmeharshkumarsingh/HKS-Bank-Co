@@ -2,7 +2,13 @@
 
 # HKS Bank & Co. | Enterprise Banking Architecture
 
+<<<<<<< HEAD
 ### Enterprise-grade **transactional banking engine**: Node.js Express API + ACID Compliance + Pessimistic Concurrency Control + Row-Level Locking
+=======
+#### 🔗 [Live Deployment Link](https://hks-bank-co.onrender.com/#https://hks-bank-co.onrender.com/#)
+
+A high-fidelity, interactive **Single Page Application (SPA)** banking portal designed to demonstrate robust backend engineering, focusing on **ACID compliance** and **pessimistic concurrency control**.
+>>>>>>> 3a0d22158830a05830bf17f2bb1ff9d2b01c51d3
 
 [![Live Deployment](https://img.shields.io/badge/Live_Deployment-Render-46E3B7?style=flat&logo=render&logoColor=white)](https://hks-bank-co.onrender.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
@@ -44,6 +50,7 @@ A high-fidelity, interactive **Single Page Application (SPA)** banking portal en
 12. [Troubleshooting](#troubleshooting)
 13. [Contributing & License](#contributing--license)
 
+<<<<<<< HEAD
 ---
 
 ## The Engineering Problem & Solution
@@ -332,3 +339,10 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 ### If you find this transactional banking architecture useful, give the repository a star.
 
 </div>
+=======
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/Optimization`)
+3.  Commit your Changes (`git commit -m 'Optimized SQL JOIN logic'`)
+4.  Push to the Branch (`git push origin feature/Optimization`)
+5.  Open a Pull Request
+>>>>>>> 3a0d22158830a05830bf17f2bb1ff9d2b01c51d3
