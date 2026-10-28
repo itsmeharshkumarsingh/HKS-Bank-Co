@@ -92,6 +92,19 @@ app.post('/api/transfer', async (req, res) => {
 });
 
 /**
+ * KEEP-ALIVE HEALTH CHECK ENDPOINT: 
+ * Pings the database to prevent Render and Aiven Free Tier instances from sleeping due to inactivity.
+ */
+app.get('/api/health', async (req, res) => {
+    try {
+        await dbInstance.query('SELECT 1');
+        res.status(200).json({ status: 'healthy', timestamp: new Date() });
+    } catch (error) {
+        res.status(500).json({ status: 'unhealthy', error: error.message });
+    }
+});
+
+/**
  * PORT DYNAMICIZATION UPGRADE: Dynamic Environment Binding
  * Ingests the `process.env.PORT` variable assigned by Render container systems.
  * If running locally, it defaults seamlessly to port 3000 to prevent local architecture breaking.
